@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    --background: #eeeeee;
+    --background: #e7f1fb;
     --foreground: #cdd1d5;
     --secondary: #e3e31b;
     --primary: #6a64e8;
@@ -14,7 +14,7 @@
     --destructive: #da0000;
   }
   body {
-    @apply bg-background font-normal text-black;
+    @apply font-normal text-black;
   }
 }
 
@@ -29,6 +29,12 @@
     .t-base {
       @apply text-[14px] leading-[20px] font-[500]; /* 14-20 */
     }
+    .t-h3 {
+      @apply !text-2xl;
+    }
+    .t-h2 {
+      @apply !text-[2rem] !leading-[2.625rem];
+    }
     .paper-sharp {
       @apply shadow-md border border-gray-300 p-4 bg-white;
     }
@@ -36,7 +42,10 @@
       @apply rounded-[8px] shadow-md border border-gray-300 p-4 bg-white;
     }
     .border-box {
-      @apply border-b-2 border-l border-r-2 border-t border-black;
+      @apply border border-[#f0f0f000];
+    }
+    .paper-blue {
+      @apply border-[2px] border-white bg-[#ecf7fe];
     }
   }
 }

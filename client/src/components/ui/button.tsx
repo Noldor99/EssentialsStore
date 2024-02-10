@@ -5,18 +5,45 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils"
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50",
+  cn(
+    "inline-flex items-center justify-center whitespace-nowrap",
+    "rounded-md text-sm font-medium transition-colors",
+    "focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring",
+    "disabled:pointer-events-none disabled:opacity-50"
+  ),
   {
     variants: {
       variant: {
-        default:
-          "bg-primary text-primary-foreground shadow hover:bg-primary/90",
-        destructive:
-          "bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90",
-        outline:
-          "border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground",
-        secondary:
-          "bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80",
+        default: cn("bg-primary text-white shadow", "hover:opacity-[80%]"),
+        black: cn(
+          "bg-white text-black shadow  border border-black",
+          "hover:text-white hover:bg-black"
+        ),
+        defaultOutlined: cn(
+          "border border-primary text-primary shadow",
+          "hover:opacity-[80%]"
+        ),
+        destructive: cn(
+          "bg-destructive text-destructive shadow-sm",
+          "hover:opacity-[80%]"
+        ),
+        destructiveOutlined: cn(
+          "border border-destructive text-destructive shadow-sm",
+          "hover:opacity-[80%]"
+        ),
+        secondary: cn(
+          "bg-secondary text-secondary shadow-sm",
+          "hover:opacity-[80%]"
+        ),
+        secondaryOutlined: cn(
+          "border border-secondary text-secondary shadow-sm",
+          "hover:opacity-[80%]"
+        ),
+        success: cn("bg-green-500 text-white shadow-sm", "hover:opacity-[80%]"),
+        successOutlined: cn(
+          "border border-green-500 text-green-500 shadow-sm",
+          "hover:opacity-[80%]"
+        ),
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
       },

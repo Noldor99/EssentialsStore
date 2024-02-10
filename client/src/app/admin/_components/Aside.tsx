@@ -24,7 +24,7 @@ export const Aside = () => {
                 key={idx}
                 href={item.path}
                 className={cn(
-                  "text-s  flex flex-row items-center space-x-4 rounded-lg p-2",
+                  "t-sm1  flex flex-row items-center space-x-4 rounded-lg p-2",
                   isCurrentPath && "font-bold"
                 )}
               >

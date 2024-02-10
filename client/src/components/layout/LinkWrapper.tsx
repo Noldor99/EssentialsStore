@@ -5,7 +5,7 @@ import { usePathname, useSearchParams } from "next/navigation"
 
 import { type ReactNode, useCallback } from "react"
 
-import { useUserStore } from "@/store"
+// import { useUserStore } from "@/store"
 
 import { cn } from "@/lib/utils"
 
@@ -22,9 +22,9 @@ export const LinkWrapper = ({
 }: LinkWrapperPropsType) => {
   const pathname = usePathname()
   const searchParams = useSearchParams()
-  const { user } = useUserStore()
+  // const { user } = useUserStore()
 
-  if (!user && url === "/admin") return null
+  // if (!user && url === "/admin") return null
 
   const relevantParams = ["view", "tags", "sort"]
   const filteredParams = new URLSearchParams()
@@ -42,10 +42,10 @@ export const LinkWrapper = ({
     <Link
       className={cn(
         "text-h2 xl:text-s",
-        pathname === url && "font-bold",
-        user &&
-          url === "/admin" &&
-          "last:border-transparent xl:last:border-l-2 xl:last:border-black xl:last:pl-8"
+        pathname === url && "font-bold"
+        // user &&
+        //   url === "/admin" &&
+        //   "last:border-transparent xl:last:border-l-2 xl:last:border-black xl:last:pl-8"
       )}
       href={fullUrl}
       onClick={onClick}
