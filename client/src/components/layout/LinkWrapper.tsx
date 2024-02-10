@@ -41,7 +41,7 @@ export const LinkWrapper = ({
   return (
     <Link
       className={cn(
-        "text-h2 xl:text-s",
+        "t-sm1",
         pathname === url && "font-bold"
         // user &&
         //   url === "/admin" &&

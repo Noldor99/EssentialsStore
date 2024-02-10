@@ -11,7 +11,7 @@ async function start() {
   const app = await NestFactory.create(AppModule, { cors: false });
   app.setGlobalPrefix('api')
 
-
+  console.log('first')
   app.enableCors({ credentials: true, origin: true });
   app.useGlobalPipes(new ValidationPipe());
 
