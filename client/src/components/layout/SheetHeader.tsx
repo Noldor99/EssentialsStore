@@ -1,12 +1,17 @@
-'use client'
+"use client"
 
-import { useState } from 'react'
+import { useState } from "react"
 
-import { IconMenuDeep, IconX } from '@tabler/icons-react'
+import { IconMenuDeep, IconX } from "@tabler/icons-react"
 
-import { LinkWrapper } from '@/components/layout/LinkWrapper'
-import { Button } from '@/components/ui/button'
-import { Sheet, SheetClose, SheetContent, SheetTrigger } from '@/components/ui/sheet'
+import { LinkWrapper } from "@/components/layout/LinkWrapper"
+import { Button } from "@/components/ui/button"
+import {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetTrigger,
+} from "@/components/ui/sheet"
 
 type SheetHeaderPropsType = {
   nav: { name: string; url: string }[]
@@ -18,13 +23,13 @@ export const SheetHeader = ({ nav }: SheetHeaderPropsType) => {
   return (
     <Sheet open={isOpen} onOpenChange={setIsOpen}>
       <SheetTrigger asChild>
-        <Button className="p-2 xl:hidden" variant="outline">
-          <IconMenuDeep size={'26px'} />
+        <Button className="p-2 xl:hidden" variant="black">
+          <IconMenuDeep size={"26px"} />
         </Button>
       </SheetTrigger>
       <SheetContent className="flex !w-full !max-w-full flex-col items-end justify-start bg-white">
         <SheetClose asChild>
-          <Button className=" p-2 xl:hidden" variant="outline">
+          <Button className=" p-2 xl:hidden" variant="black">
             <IconX />
           </Button>
         </SheetClose>
