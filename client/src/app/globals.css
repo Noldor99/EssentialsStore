@@ -14,7 +14,7 @@
     --destructive: #da0000;
   }
   body {
-    @apply font-normal text-black;
+    @apply font-normal text-black t-base;
   }
 }
 

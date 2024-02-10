@@ -10,7 +10,7 @@ export const Header = () => {
   ]
 
   return (
-    <header className="t-sm1 sticky top-0 z-50 w-full border-b-2 border-black bg-white py-4">
+    <header className="sticky top-0 z-50 w-full border-b-2 border-black bg-white py-4">
       <div className="container">
         <div className="flex items-center justify-end gap-4 xl:justify-between xl:gap-8">
           <nav className="hidden items-center justify-between  gap-8 xl:flex">
