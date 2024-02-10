@@ -1,12 +1,12 @@
 import { useStore } from 'zustand'
-import { createJSONStorage, devtools, persist } from 'zustand/middleware'
+import { createJSONStorage, persist } from 'zustand/middleware'
 import { createStore } from 'zustand/vanilla'
 
-import { UserType } from '@/types/user'
+import { IUser } from '@/types/user'
 
 type UserStoreType = {
-  user: UserType | null
-  setUser: (user: UserType | null) => void
+  user: IUser | null
+  setUser: (user: IUser | null) => void
 }
 
 export const userStore = createStore<UserStoreType>()(
